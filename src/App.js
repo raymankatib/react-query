@@ -6,6 +6,7 @@ import { HomePage } from './components/Home.page';
 import { RQSuperHeroesPage } from './components/RQSuperHeroes.page';
 import { SuperHeroesPage } from './components/SuperHeroes.page';
 import EventRQSuperHeroes from './components/EventRQSuperHeroes.page';
+import RQSuperHeroe from './components/RQSuperHeroe';
 
 const queryClient = new QueryClient();
 function App() {
@@ -30,6 +31,7 @@ function App() {
 						</ul>
 					</nav>
 					<Routes>
+						<Route path="/rq-super-hero/:heroId" element={<RQSuperHeroe />} />
 						<Route path="/event-super-heroes" element={<EventRQSuperHeroes />} />
 						<Route path="/super-heroes" element={<SuperHeroesPage />} />
 						<Route path="/rq-super-heroes" element={<RQSuperHeroesPage />} />
